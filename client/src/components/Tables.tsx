@@ -8,13 +8,10 @@ import {
   TableContainer,
   TableHead,
   TableRow,
-  Button,
 } from "@mui/material";
 import { useGetTablesQuery } from "../services/Table";
-import { useState } from "react";
 const Tables = () => {
-  const { data, isLoading, error } = useGetTablesQuery();
-  const [response, setRes] = useState<any[] | null>(null);
+  const { data, isLoading } = useGetTablesQuery();
   if (isLoading) {
     return (
       <Box
