@@ -11,7 +11,7 @@ dotenv.config();
 const app = express();
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "src/upload");
+    cb(null, "src");
   },
   filename: (req, file, cb) => {
     const ext = path.extname(file.originalname);
