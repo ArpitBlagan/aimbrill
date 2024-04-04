@@ -21,7 +21,8 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://aimbrill-zaz3.vercel.app/"],
+    origin: ["http://localhost:5173", "https://aimbrill-zaz3.vercel.app", "*"],
+    credentials: true,
   })
 );
 app.post(
