@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-const baseUrl = "http://localhost:4000";
+const baseUrl = "https://aimbrill.onrender.com";
 export const tableApi = createApi({
   reducerPath: "table",
   baseQuery: fetchBaseQuery({ baseUrl }),

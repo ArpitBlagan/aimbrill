@@ -68,7 +68,7 @@ const Tablee = () => {
               const formData = new FormData();
               formData.append("file", file);
               const res = await axios.post(
-                "http://localhost:4000/add/file",
+                "https://aimbrill.onrender.com/add/file",
                 formData
               );
               console.log(res.data);
