@@ -43,6 +43,9 @@ app.post(
       const sheet = workbook.Sheets[sheetName];
       const jsonData = xlsx.utils.sheet_to_json(sheet);
       console.log(jsonData);
+      if (!jsonData.length) {
+        throw new Error("something went wrong");
+      }
       const ress = await prisma.table.create({
         data: {
           meta: req.file.originalname,
